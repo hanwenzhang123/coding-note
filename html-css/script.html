@@ -1,0 +1,10 @@
+< ! -- <script> tag should be use always before body close or Bottom in HTML file. 
+Page will load with html and css and later js will load. -->
+
+<script src="script.js" async></script>
+<script src="script.js" defer></script>
+<script src="script.js" async defer></script>
+
+< ! -- async script will be executed asynchronously as soon as it is available
+defer script is executed when the document has finished parsing
+async defer script falls back to the defer behavior if async is not supported -->
