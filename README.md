@@ -1,1 +1,1 @@
-# techdegree-note
+# Techdegree from Treehouse
