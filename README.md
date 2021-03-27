@@ -1,1 +1,1 @@
-# JavaScript Functions
+# JavaScript Note
