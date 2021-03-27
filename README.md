@@ -1,1 +1,1 @@
-# Techdegree from Treehouse
+# JavaScript Functions
