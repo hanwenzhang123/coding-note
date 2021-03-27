@@ -1,1 +1,1 @@
-# JavaScript Note
+# Coding Note
