@@ -1,5 +1,5 @@
 const inStock = ['pizza', 'cookies', 'eggs', 'apples', 'milk', 'cheese', 'bread', 'lettuce', 'carrots', 'broccoli', 'potatoes', 'crackers', 'onions', 'tofu', 'limes', 'cucumbers'];
-const search = prompt('Search for a product.');
+const search = prompt('Search for a product.'); //the little box when open the browser
 let message;
 
 if ( inStock.includes(search) ) {
