@@ -1,0 +1,60 @@
+header span {
+  color: darkviolet;
+  font-size: 26px;
+}
+/*This rule targets only a <span> element that's nested within a <header>*/
+
+#main-nav a {  /* class */
+  text-decoration: none;
+}
+
+.main-header .headline { /* ID */
+  color: white;
+  font-size: 72px;
+}
+
+/* list items in an ordered and unordered list */
+ul li {
+ background-color: tomato;
+}
+
+ol li {
+ background-color: papayawhip; 
+}
+
+/* this selector matches <li> tags nested within a <nav> element */
+nav li {
+  margin-left: 1.5em;
+}
+
+nav li a {
+  text-decoration: none;
+}
+
+
+/* >: child combinator - Target Direct Children*/
+/* target only the <li> tags that are directly nested inside the <ul>*/
+
+ul > li {
+  border: 1px dashed lightgrey; 
+}
+
+
+/* +: adjacent sibling combinator - Target Adjacent Siblings */
+/* <p> element that immediately follows an <img> element */
+
+img + p {
+  margin-bottom: 20px;
+}
+
+/* targets a .btn class that immediately follows an element with a .btn class */
+
+.btn + .btn {
+  margin-left: 20px; 
+}
+
+/* ~: general sibling combinator - Target General Siblings*/
+targets all <div> elements that follow a <header>
+header ~ div { 
+ background: aliceblue;
+}
