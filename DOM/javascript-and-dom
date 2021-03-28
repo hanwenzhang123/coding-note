@@ -3,3 +3,4 @@ Element.innerHTML
 Element.attribute
 Element.style.prop
 document.createElement
+Node.appendChild(childElement)
