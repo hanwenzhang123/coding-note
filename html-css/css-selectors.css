@@ -1,14 +1,15 @@
+/*This rule targets only a <span> element that's nested/descendant within a <header>*/
 header span {
   color: darkviolet;
   font-size: 26px;
 }
-/*This rule targets only a <span> element that's nested within a <header>*/
 
-#main-nav a {  /* class */
+
+#main-nav a {  /* ID */
   text-decoration: none;
 }
 
-.main-header .headline { /* ID */
+.main-header .headline { /* Class */
   color: white;
   font-size: 72px;
 }
