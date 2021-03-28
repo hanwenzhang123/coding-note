@@ -32,7 +32,7 @@ addItemButton.addEventListener('click', () => {
   
 removeItemButton.addEventListener('click', () => {
   let ul = document.getElementsByTagName('ul')[0];
-  let li = document.querySelector('li:last-child');
+  let li = document.querySelector('li:last-child');  //:last-child CSS pseudo-class represents the last element among a group of sibling elements.
   ul.removeChild(li);
 });  
   
