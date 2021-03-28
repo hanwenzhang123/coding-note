@@ -111,22 +111,3 @@ var toggler = document.querySelector('[data-toggle-controller]');
 // assign the element with the data attribute 'data-toggle-content' to the variable 'toggledContent'
 var toggledContent = document.querySelector('[data-toggle-content]');
 
-
-Naming classes
-BEM (Block, Element, Modifier) 
-html:
-
-<ul class="nav">
-  <li class="nav__item"><a href="#type">Typography</a></li>
-  <li class="nav__item"><a href="#buttons">Buttons</a></li>
-  <li class="nav__item--current"><a href="#nav">Navigation</a></li>
-</ul>
-css:
-
-.nav {...}
-.nav__item {...}
-.nav__item--current {...}
-
-The class nav is considered a 'block' -- an independent component of the page
-The class nav__item is an 'element' that belongs to the nav block only
-nav__item--current is a 'modifier' class that makes changes to a block and its elements
