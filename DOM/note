@@ -4,4 +4,4 @@ Element.attribute
 Element.style.prop
 document.createElement
 Node.appendChild(childElement)
-Nod.removeChild()
+Nod.removeChild(childElement)
