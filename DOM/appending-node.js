@@ -1,6 +1,16 @@
 //node.appendChild(childElement)
 //node belongs to the DOM while plain element is HTML 
 
+
+var contentDiv = document.getElementById('content');
+//Create a paragraph element and assign it to the newParagraph variable.
+var newParagraph = document.createElement('p');
+//set the class attribute of the new paragraph to panel
+newParagraph.className = 'panel';
+//append the newParagraph element to contentDiv
+contentDiv.appendChild(newParagraph)
+
+
 const toggleList = document.getElementById('toggleList');
 const listDiv = document.querySelector('.list');
 const descriptionInput = document.querySelector('input.description');
