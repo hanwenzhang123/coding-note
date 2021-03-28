@@ -1,0 +1,76 @@
+targets all <label> elements with a title attribute
+label[title] {
+  color: indigo;
+}
+
+HTML provides custom data- attributes that allow you to store extra information on any element.
+You can target custom data-* attributes with CSS, also by wrapping them in square bracketsYou can target custom data-* attributes with CSS, also by wrapping them in square brackets
+<ul>
+  <li data-topic="javascript" data-id="1">Guil</li>
+  <li data-topic="python" data-id="2">Ashley</li>
+  <li data-topic="ios" data-id="3">Pasan</li>
+<ul>
+
+[data-topic="javascript"] {
+  background-color: #3659a2;
+}
+[data-topic="python"] {
+  background-color: #008297;
+}
+[data-topic="ios"] {
+  background-color: #30826C;
+}
+
+
+use attribute selectors in your CSS to set styles based on the data.
+<div data-columns="8">...</div>
+<div data-columns="6">...</div>
+
+[data-columns="8"] {
+  width: 60%;
+}
+[data-columns="6"] {
+  width: 40%;
+}
+
+
+Data Attributes and JavaScript
+when selecting an element with JavaScript, it's recommended that you avoid using a selector that's also used in your CSS.
+It's also common to select an element using a data attribute. 
+
+<button class="btn-sm" data-toggle-controller>Toggle Teachers</button>
+<ul class="list-teachers" data-toggle-content>
+  ...
+</ul>
+
+// assign the element with the data attribute 'data-toggle-controller' to the variable 'toggler'
+var toggler = document.querySelector('[data-toggle-controller]');
+
+// assign the element with the data attribute 'data-toggle-content' to the variable 'toggledContent'
+var toggledContent = document.querySelector('[data-toggle-content]');
+
+
+Naming classes
+BEM (Block, Element, Modifier) 
+html:
+
+<ul class="nav">
+  <li class="nav__item"><a href="#type">Typography</a></li>
+  <li class="nav__item"><a href="#buttons">Buttons</a></li>
+  <li class="nav__item--current"><a href="#nav">Navigation</a></li>
+</ul>
+css:
+
+.nav {...}
+.nav__item {...}
+.nav__item--current {...}
+
+The class nav is considered a 'block' -- an independent component of the page
+The class nav__item is an 'element' that belongs to the nav block only
+nav__item--current is a 'modifier' class that makes changes to a block and its elements
+
+
+it's common to use a dedicated prefix (or hook), like js-, if a class will be used by JavaScript only
+<ul class="nav js-site-nav">
+  ...
+</ul>
