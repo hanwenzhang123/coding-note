@@ -1,0 +1,5 @@
+Element.textContent
+Element.innerHTML
+Element.attribute
+Element.style.prop
+document.createElement
