@@ -1,0 +1,29 @@
+/*Target a First Child Element*/
+
+li:first-child {
+  background: #52bab3;
+  color: white;
+}
+
+/*Target a Last Child Element*/
+li:last-child {
+  border-bottom: none;
+}
+
+/*Select Even Elements Within a Parent*/
+li:nth-child(even) {
+  color: white;
+  background-color: springgreen;
+}
+
+/*Select Odd Elements Within a Parent*/
+li:nth-child(odd) {
+  color: white;
+  background-color: turquoise;
+}
+
+/*Select a Specific Element Within a Parent*/
+li:nth-child(3) {
+  color: white;
+  background-color: thistle;
+} 
