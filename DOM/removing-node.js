@@ -1,3 +1,11 @@
+//First, select the <ul> element and store it in the variable myList.
+var myList = document.querySelector('ul');
+//Next, select the <li> with the ID first and store it in the variable firstListItem.
+let firstListItem = document.querySelector('li:first-child');
+//Finally, remove the <li> element stored in firstListItem from the DOM.
+myList.removeChild(firstListItem);
+
+
 const toggleList = document.getElementById('toggleList');
 const listDiv = document.querySelector('.list');
 const descriptionInput = document.querySelector('input.description');
