@@ -16,6 +16,16 @@ for (const element of array1) {
 // expected output: "c"
 
 
+const iterable = [10, 20, 30];
+
+for (let value of iterable) {
+  value += 1;
+  console.log(value);
+}
+// 11
+// 21
+// 31
+
 
 
 for (let i=0; i < paragraphs.length; i++ ) { 
