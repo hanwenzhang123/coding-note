@@ -1,3 +1,20 @@
+//event - we can tie behavior to them
+function exec(func, arg) {
+  func(arg);
+}
+exec((something) => {
+  console.log(something);
+}, 'Greetings, everyone!');
+// one function passes to another function - allow you more control overe when and how a function gets executed
+
+
+//timeout
+var timeoutID = scope.setTimeout(function[, delay, arg1, arg2, ...]);
+window.setTimeout((something) => {
+  console.log(something);
+}, 3000, 'Greetings, everyone!');
+
+
 /*How would you set the following function `add` up to run after 5 seconds pass, using Window.setTimeout? 
   In addition, how would you pass `add` the arguments 2 and 2 when it runs? */
   
