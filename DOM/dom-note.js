@@ -33,5 +33,13 @@ EventTarget.addEventListner('click',()=>{
   //handle event
 });
 
+
 Event.target	
 //reference the element that is first receive the event
+
+
+let paragraph = document.getElementById('myParagraph')
+let parent = paragraph.parentNode
+parent.removeChild (paragraph);
+//get the reference to parent node
+Element.parentNode
