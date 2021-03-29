@@ -1,6 +1,11 @@
 //node.appendChild(childElement)
 //node belongs to the DOM while plain element is HTML 
 
+//Place the new element p as the last child of the element stored in the div constant
+
+const div = document.querySelector('div#feedback');
+const p = document.createElement('p');
+div.appendChild(p);
 
 var contentDiv = document.getElementById('content');
 //Create a paragraph element and assign it to the newParagraph variable.
