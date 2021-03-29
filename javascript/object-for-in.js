@@ -1,3 +1,25 @@
+//A for...in loop only iterates over enumerable, non-Symbol properties
+//The for...in statement iterates over all enumerable properties of an object that are keyed by strings 
+//(ignoring ones keyed by Symbols), including inherited enumerable properties.
+
+for (variable in object)
+  statement
+  
+
+const object = { a: 1, b: 2, c: 3 };
+
+for (const property in object) {
+  console.log(`${property}: ${object[property]}`);
+}
+
+// expected output:
+// "a: 1"
+// "b: 2"
+// "c: 3"
+
+
+
+
 const person = {
   name: 'Reggie',
   role: 'Software developer',
