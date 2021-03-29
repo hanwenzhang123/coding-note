@@ -30,16 +30,30 @@ EventTarget.addEventListener('type', listener[,options]);
 
 //event object
 EventTarget.addEventListner('click',()=>{
-  //handle event
+  //handle event, event is an object with info and methods
 });
 
 
 Event.target	
 //reference the element that is first receive the event
 
+document.addEventListener('click',(event) => {
+  condole.log (event.target);  //check the target of the event you click on
+});
+
+event.target.tagName == "TAG NAME ALL CAPITAL"
+//read-only property of the Element interface returns the tag name of the element on which it's called
+
+
+Element.parentNode // get the parent node
 
 let paragraph = document.getElementById('myParagraph')
 let parent = paragraph.parentNode
 parent.removeChild (paragraph);
 //get the reference to parent node
-Element.parentNode
+
+if (event.target.tagName == 'LI' {
+let li = event.target;
+let ul = li.parentNoe;
+ul.removeChild(li)
+}
