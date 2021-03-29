@@ -14,3 +14,14 @@ for (const element of array1) {
 // expected output: "a"
 // expected output: "b"
 // expected output: "c"
+
+
+
+
+for (let i=0; i < paragraphs.length; i++ ) { 
+  paragraphs[i].style.color= 'blue'; 
+}
+
+for (let p of paragraphs) {
+    p.style.color = 'blue';
+}
