@@ -44,16 +44,3 @@ document.addEventListener('click',(event) => {
 event.target.tagName == "TAG NAME ALL CAPITAL"
 //read-only property of the Element interface returns the tag name of the element on which it's called
 
-
-Element.parentNode // get the parent node
-
-let paragraph = document.getElementById('myParagraph')
-let parent = paragraph.parentNode
-parent.removeChild (paragraph);
-//get the reference to parent node
-
-if (event.target.tagName == 'LI' {
-let li = event.target;
-let ul = li.parentNoe;
-ul.removeChild(li)
-}
