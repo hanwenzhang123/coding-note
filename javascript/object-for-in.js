@@ -53,8 +53,9 @@ for (let score of scores) {
 console.log(total / scores.length)
 
 
-
-
+//Object.key(testScores). ----- the name 
+//Object.value(testScores)  ----- the score
+//Object.entries(testScores)  ----- nested array of the key value pairs
 
 
 const person = {
