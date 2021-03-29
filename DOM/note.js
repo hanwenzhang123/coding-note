@@ -13,3 +13,9 @@ EventTarget.addEventListener('type', listener[,options]);
 EventTarget.addEventListner('click',()=>{
   //handle event, event is an object with info and methods
 });
+
+ParentNode.children 
+//read-only property that returns HTML of the child elements of Node. 
+
+parentNode.firstElementChild
+parentNode.lastElementChild
