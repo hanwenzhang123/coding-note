@@ -21,3 +21,8 @@ var timeoutID = scope.setTimeout(function[, delay, arg1, arg2, ...]);
 window.setTimeout((something) => {
   console.log(something);
 }, 3000, 'Greetings, everyone!');
+
+
+EventTarget.addEventListener('type', listener[,options]);
+
+//event type: click, mouseover, mousedown, mouseup, keypress, keyup, keydown
