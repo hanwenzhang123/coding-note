@@ -26,3 +26,9 @@ window.setTimeout((something) => {
 EventTarget.addEventListener('type', listener[,options]);
 
 //event type: click, mouseover, mousedown, mouseup, keypress, keyup, keydown
+
+
+//event object
+EventTarget.addEventListner('click',()=>{
+  //handle event
+});
