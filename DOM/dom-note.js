@@ -32,3 +32,6 @@ EventTarget.addEventListener('type', listener[,options]);
 EventTarget.addEventListner('click',()=>{
   //handle event
 });
+
+Event.target	
+//reference the element that is first receive the event
