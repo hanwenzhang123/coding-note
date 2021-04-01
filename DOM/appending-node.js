@@ -1,5 +1,5 @@
 //node.appendChild(childElement)
-//node belongs to the DOM while plain element is HTML 
+//node belongs to the DOM while plain element is HTML.
 
 //Place the new element p as the last child of the element stored in the div constant
 
