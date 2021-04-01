@@ -1,4 +1,4 @@
-//event - we can tie behavior to them
+//event - we can tie behavior to them.
 function exec(func, arg) {
   func(arg);
 }
