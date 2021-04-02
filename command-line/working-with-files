@@ -1,0 +1,41 @@
+1.
+Fill in the blanks to complete a command to copy the contents of the template.txt file to a file named issue_27.txt.
+
+treehouse:~/workspace/tickets$ ls
+template.txt  issue_26.txt
+treehouse:~/workspace/tickets$ cp template.txt issue_27.txt
+
+2.
+Fill in the blanks to complete a command to move the contents of the issue_38.txt file to a file named issue_28.txt.
+
+treehouse:~/workspace/tickets$ ls
+template.txt  issue_27.txt  issue_38.txt
+treehouse:~/workspace/tickets$ mv issue_38.txt issue_28.txt
+
+3.
+Fill in the blanks to complete a command to copy the tickets directory and all its contents to a new tickets_backup directory.
+use the -r (recursive) option with cp
+
+treehouse:~/workspace$ ls
+documents  tickets
+treehouse:~/workspace$ cp -r tickets/ tickets_backup
+
+4. 
+Fill in the blanks to complete a command to remove the issue_27.txt file.
+
+treehouse:~/workspace/tickets$ ls
+template.txt  issue_27.txt  issue_28.txt
+treehouse:~/workspace/tickets$ rm issue_27.txt
+
+5.
+Fill in the blanks to complete a command that will create a new features directory with a new ideas subdirectory inside it.
+Remember that the mkdir command has an option that will create parent directories as needed...
+
+treehouse:~/workspace$ mkdir -p features/ideas
+
+6.
+Fill in the blank to complete a command to view the contents of the profile.txt file using a pager program.
+
+treehouse:~/workspace/documents$ ls
+profile.txt  resume.txt
+treehouse:~/workspace/documents$ more profile.txt
