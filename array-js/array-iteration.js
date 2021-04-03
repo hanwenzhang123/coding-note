@@ -53,3 +53,9 @@ let sNames = [];
 
 names.forEach((name, index) = > console.log (`${index + 1}) ${name}`));  // Result: 1) 2) 3)
 
+
+//multiply 10
+const numbers = [1,2,3,4,5,6,7,8,9,10];
+let times10 = [];
+
+numbers.forEach(number =>  times10.push(number * 10) );
