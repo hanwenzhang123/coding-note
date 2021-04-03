@@ -32,7 +32,7 @@ console.log (newUsersArray)
 
 
 
-//use reduce here
+// use 'reduce' here
 
 const users = [
   {name: 'Samir', age: 27},
