@@ -49,3 +49,16 @@ console.log (usersObject)
 
 
 
+//Using the map method on the authors array, create an array of full name strings, comprising the first name, then a space, then the last name. 
+
+const authors = [
+  { firstName: "Beatrix", lastName: "Potter" },
+  { firstName: "Ann", lastName: "Martin" },
+  { firstName: "Beverly", lastName: "Cleary" },
+  { firstName: "Roald", lastName: "Dahl" },
+  { firstName: "Lewis", lastName: "Carroll" }
+];
+let fullAuthorNames = authors.map(name => `${name.firstName} ${name.lastName}`);
+
+
+
