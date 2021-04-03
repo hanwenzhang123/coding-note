@@ -6,8 +6,8 @@ class Pet {
     this.sound = sound;
   }
   
-  get activity() {      //value is dynamic because it depends on the time
-    const today = new Date();   // returns a string representation of the current date and time
+  get activity() {      //value (activity) is dynamic because it depends on the time of the date, we can't set to the constructured method
+    const today = new Date();   // hold a new instance of js object. Data ()returns a string representation of the current date and time
     const hour = today.getHours(); //returns the hour for the specified date, according to local time.
   
     if (hour > 8 && hour <= 20) {
@@ -15,14 +15,16 @@ class Pet {
     } else {
       return 'sleeping';
     }
-  }
+  } //if we output to the console, we won't see the activity.
+  //we only get the gette value when we access it, but never attach to the object.
+  //we have to access it directly otherwise the value won't show.
   
-  get owner() {
+  get owner() {       //if we need to retrieve owner value at setter function, we need to declare it in order to access it. 
     return this._owner;
   }
   
-  set owner(owner) {
-    this._owner = owner;
+  set owner(owner) {  //setter always with one parameter
+    this._owner = owner; //the name of the property would never be the same as the getter or setter property. we can't do this.own, we need backing property like ._owner.  
     console.log(`setter called: ${owner}`);
   }
   
