@@ -32,4 +32,11 @@ let numberOf503 = phoneNumbers.reduce((total, phoneNumberString) => {
   }
   return total;
 }, 0);
+
                                 
+numberOf503 = phoneNumbers.reduce((count, phoneNumber) => { // This works too
+  if(phoneNumber.includes('(503)')){
+    count += 1;
+  }
+  return count;
+},0);
