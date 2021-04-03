@@ -25,3 +25,6 @@ const people = [ { name: "Andrew", age: 34 }, { name: "Lauren", age: 29 } ];
 sortArray(people, sortByAge);
 //sortByAge
 
+
+//How do you access the element from the event object triggered by the addEventListener method?
+event.target
