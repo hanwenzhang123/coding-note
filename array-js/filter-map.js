@@ -2,9 +2,8 @@ const userNames = ['Samir', 'Angela', 'Beatrice', 'Shaniqua', 'Marvin', 'Sean'];
   
 const users = userNames
 .filter(name => name.charAt(0) === 'S')
-.map(name => ( {name} ));   //{name} here is the short version for {name: name} 
-//name => ({ 'name': name })
-//arrow function here does not know it is the object literal if we only use { } which is also 
+.map(name => ( {name} ));   //Because they use curly braces to surround their function bodies, the arrow function doesn't know this is an object literal, which also uses curly braces{}. Surround this object with parenthesis(), That's just to tell JavaScript that I want to return this object literal from the callback.
+//{name} here is the short version for {name: name} , same as name => ({ 'name': name })
 
 console.log(users)
 
@@ -27,8 +26,8 @@ console.log(users);
 
 
 
-    
-    
+
+// filter 30 years and over, map return only user name  
 const users = [
   {name: 'Samir', age: 27},
   {name: 'Angela', age: 33},
@@ -37,7 +36,9 @@ const users = [
   {name: 'Marvin', age: 23},
   {name: 'Sean', age: 47}
 ];
-
+const userNames = users
+  .filter(user => user.age >= 30)
+  .map(user => user.name);
     // Result: ['Angela', 'Beatrice', 'Shaniqua', 'Sean'];
 
 
@@ -70,8 +71,6 @@ const todos = [
     }
 ];
 let unfinishedTasks = todos
-  .filter( if ( arr % 2 !== 0) )
-  .map( arr => { return arr } )
-;
-
-
+  .filter(todo => todo.done === false)
+  .map(todo => todo.todo);
+// unfinishedTasks should be: ["Buy apples", "Write web app", "Call mom"]
