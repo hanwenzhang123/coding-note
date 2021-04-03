@@ -45,5 +45,5 @@ function tickClock() {
   clockSection.textContent = getTime();
 }
 
-tickClock(); // it is important to call the function first then the clock goes itself
+tickClock(); // you have to invoke the callback yourself first mannually you want it to run immediately. it is important to call the function first then the clock goes itself
 setInterval (tickClock, 1000);
