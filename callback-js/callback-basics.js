@@ -28,3 +28,6 @@ sortArray(people, sortByAge);
 
 //How do you access the element from the event object triggered by the addEventListener method?
 event.target
+
+//What is the correct syntax for adding an event handler callback to an HTML element?
+element.addEventListener(eventType, callback);
