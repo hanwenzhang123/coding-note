@@ -1,9 +1,9 @@
-<-- AJAX - Asynchronous JavaScript And XML.  making request behind the scene
+/* AJAX - Asynchronous JavaScript And XML.  making request behind the scene
 4 steps of an AJAX request
 1. creates XMLHttpRequest Object
 2. create callback function
 3. open request
-4. send request -->
+4. send request */
 
 
 <!DOCTYPE html>
@@ -15,13 +15,21 @@
   <title>AJAX with JavaScript</title>
   
 <scirpt>
-const xhr = new XMLHttpRequest();   <-- 1. create the object, each request needs to request a new new XMLHttpRequest(). variable name can be anything -->
+const xhr = new XMLHttpRequest();   // 1. create the object, each request needs to request a new new XMLHttpRequest(). variable name can be anything -->
 
-xhr.onreadystatechange = function( ){      <-- 2. create a callback to response the request, it is what you want the browser to run, server send back to response -->
-  if(xhr.readyState === 4) {
-    document.getElementById('ajax').innerHTML = xhr.responseText;     <-- the information that response send back -->
-  }
-};
+xhr.onreadystatechange = function( ){      // 2. create a callback to response the request, it is what you want the browser to run, server send back to response -->
+  if(xhr.readyState === 4){       // everytime 'readyState' fires, our function runs. -->
+   if(xhr.status === 200) {      // 200 means okay, the successful request. -->
+    document.getElementById('ajax').innerHTML = xhr.responseText;     // the information that response send back -->
+  } else {
+    alert(xhr.statusText);
+  }  } };    
+  /*
+  if (xhr.status === 404){
+        //file not found
+  } else if (xhr.status === 500){
+      //server had a problem
+      */
 xhr.open('GET', 'sidebar.html');       <-- 3.open request-->
 function sendAJAX(){       <-- 4. send request -->
   xhr.send();    
