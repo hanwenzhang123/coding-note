@@ -1,0 +1,50 @@
+/*AJAX - Asynchronous JavaScript And XML.  making request behind the scene
+4 steps of an AJAX request
+1. creates XMLHttpRequest Object
+2. create callback function
+3. open request
+4. send request*/
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link href='//fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="css/main.css">
+  <title>AJAX with JavaScript</title>
+  
+<scirpt>
+let xhr = new XMLHttprequest();   // 1. create the object
+
+xhr.onreadystatechange = function( ){      // 2. create a callback to response the request
+  if(xhr.readyState === 4) {
+    document.getElementById('ajax').innerHTML = xhr.responseText;     //the information that response send back
+  }
+};
+xhr.open('GET', 'sidebar.html');       // 3.open request
+function sendAJAX(){       //4. send request
+  xhr.send();    
+  document.getElementById('load').style.display = "none",
+
+</scirpt>
+</head>
+<body>
+  <div class="grid-container centered">
+    <div class="grid-100">
+      <div class="contained">
+        <div class="grid-100">
+          <div class="heading">
+            <h1>Bring on the AJAX</h1>
+            <button id = "load" onclick ="sendAJAX()"> Bring it! </button>
+          </div>
+          <div id="ajax">
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+
