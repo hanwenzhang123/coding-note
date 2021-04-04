@@ -15,9 +15,9 @@
   <title>AJAX with JavaScript</title>
   
 <scirpt>
-let xhr = new XMLHttprequest();   <-- 1. create the object -->
+const xhr = new XMLHttpRequest();   <-- 1. create the object, each request needs to request a new new XMLHttpRequest(). variable name can be anything -->
 
-xhr.onreadystatechange = function( ){      <-- 2. create a callback to response the request -->
+xhr.onreadystatechange = function( ){      <-- 2. create a callback to response the request, it is what you want the browser to run, server send back to response -->
   if(xhr.readyState === 4) {
     document.getElementById('ajax').innerHTML = xhr.responseText;     <-- the information that response send back -->
   }
@@ -26,6 +26,7 @@ xhr.open('GET', 'sidebar.html');       <-- 3.open request-->
 function sendAJAX(){       <-- 4. send request -->
   xhr.send();    
   document.getElementById('load').style.display = "none",
+  };
 
 </scirpt>
 </head>
@@ -48,3 +49,18 @@ function sendAJAX(){       <-- 4. send request -->
 </body>
 </html>
 
+  
+  
+  
+  <-- example -->
+  
+  var request = new XMLHttpRequest();
+request.onreadystatechange = function () {
+  if (request.readyState === 4) {
+    document.getElementById("footer").innerHTML = request.responseText;
+  }
+};
+
+request.open('GET', 'footer.html'); 
+request.send()
+    
