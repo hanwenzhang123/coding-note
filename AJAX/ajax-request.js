@@ -1,10 +1,10 @@
 /* AJAX - Asynchronous JavaScript And XML.  making request behind the scene
 4 steps of an AJAX request
-1. creates XMLHttpRequest Object
-2. create callback function
-3. open request
-4. send request */
-
+1. creates XMLHttpRequest Object    --> const ~ = new XMLHttpRequest()
+2. create callback function     --> ~.onreadystatechange = function() { }
+3. open request     --> ~.open()
+4. send request     --> ~.send()
+*/
 
 <!DOCTYPE html>
 <html>
@@ -16,9 +16,9 @@
   
 <scirpt>
 const xhr = new XMLHttpRequest();   // 1. create the object, each request needs to request a new new XMLHttpRequest(). variable name can be anything -->
-
+//onreadystatechange
 xhr.onreadystatechange = function( ){      // 2. create a callback to response the request, it is what you want the browser to run, server send back to response -->
-  if(xhr.readyState === 4){       // everytime 'readyState' fires, our function runs. -->
+  if(xhr.readyState === 4){       // everytime 'readyState' fires, our function runs. 4 is the value when browser has receive all of the data from server. -->
    if(xhr.status === 200) {      // 200 means okay, the successful request. -->
     document.getElementById('ajax').innerHTML = xhr.responseText;     // the information that response send back -->
   } else {
@@ -30,9 +30,9 @@ xhr.onreadystatechange = function( ){      // 2. create a callback to response t
   } else if (xhr.status === 500){
       //server had a problem
       */
-xhr.open('GET', 'sidebar.html');       <-- 3.open request-->
-function sendAJAX(){       <-- 4. send request -->
-  xhr.send();    
+xhr.open('GET', 'sidebar.html');       //3.open request-->
+function sendAJAX(){      //4. send request -->
+  xhr.send();             // just .send() is good, here is the example for the button in the div
   document.getElementById('load').style.display = "none",
   };
 
@@ -60,8 +60,7 @@ function sendAJAX(){       <-- 4. send request -->
   
   
   
-  <-- example -->
-  
+//example 1 
   var request = new XMLHttpRequest();
 request.onreadystatechange = function () {
   if (request.readyState === 4) {
@@ -71,4 +70,16 @@ request.onreadystatechange = function () {
 
 request.open('GET', 'footer.html'); 
 request.send()
+  
+  
+  
+  //example 2
+  var xhr = new XMLHttpRequest();
+xhr.onreadystatechange = function() {
+  if(xhr.readyState === 4 && xhr.status === 200) { 
+    document.getElementById('sidebar').innerHTML =  xhr.responseText
+  }
+};
+xhr.open('GET', 'sidebar.html');
+xhr.send();
     
