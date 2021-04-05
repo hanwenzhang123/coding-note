@@ -1,8 +1,35 @@
 Async: Several blocks of code can run at the same time. One call doesn't stop program's execution
 Sync: Only one block can run at at time
+
 JavaScript engine - Built in interpreter that executes JS code
+
 call stack - the JavaScript engine is able to keep track of the order of function calls and where it is in a program at any given moment, using a mechanism called:
+
+JavaScript can run only one task to completion before starting a new task.
+Javascript is a synchronous, single threaded language
+
+What role do web APIs play in the JS call stacking process?
+Web APIs process async operations, keeping the call stack clear of blocking operations. This allows for asynchronous code
+
 callback queue - holding area for callbacks that are waiting to be put on the call stack and eventually executed.
 callback queue - a list (or line) containing all the async task callbacks waiting to be executed
+What kinds of tasks are added to the callback queue?
+Only callbacks for (non-blocking) operations that are scheduled to complete execution at a later time like setTimeout, setInterval and AJAX requests, for example, are added to the callback queue
+
 Event Loop - Any time the call stack is empty, the event loop pushes the first task from the callback queue onto the call stack and runs it.
+Monitor the call stack and callback queue. Anytime the call stack is empty, the event loop takes the first task from the callback queue and pushes it onto the call stack, and runs it.
+
+callback function - A f(x) that is passed to another f(x) as an argument
+Higher-order functions - Takes function as an argument and/or returns a function
+A callback function in an asynchronous program executes at some point later, once the parent function receives the data it needs.
+
+Promise States - Pending, fulfilled, rejected
+Steps for working w. Promises
+- Create promise using Promise() constructor
+- Define what should happen when the promise is fulfilled or rejected
+- Consume the value of a fulfilled promise, or provide a rejection reason
+A promise represents: The eventual completion of an async operation
+Promise.all() rejects the entire promise if any of the promises passed to it fail.
+Promise.all joins multiple individual promises into a single returned Promise when all of the promises resolve.
+
 
