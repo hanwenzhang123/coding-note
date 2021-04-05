@@ -27,3 +27,19 @@ btn.addEventListener('click', (event) => {
 
   event.target.remove();
 });
+
+
+
+
+//Promise.all() - keep track of multiple asynchronous operations 
+
+function getProfiles(json) {
+  const profiles = json.people.map( person => {
+    return getJSON(wikiUrl + person.name);      
+  }); 
+  return Promise.all(profiles);
+}
+//promise.all is going to wait on all of the individual promise objects then joins them into one and returns a value when all the specific promises are fulfilled.
+//promise.all will reject as soon as any of the promises passed to it failed, it rejects the entire promise. 
+
+
