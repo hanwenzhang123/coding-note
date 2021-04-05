@@ -16,7 +16,7 @@
   
 <scirpt>
 const xhr = new XMLHttpRequest();   // 1. create the object, each request needs to request a new new XMLHttpRequest(). variable name can be anything -->
-//onreadystatechange
+//onreadystatechange - hold number 0 to 4 (0-3 early stage, 4 is ready to send) - everytime it fires, our function runs
 xhr.onreadystatechange = function( ){      // 2. create a callback to response the request, it is what you want the browser to run, server send back to response -->
   if(xhr.readyState === 4){       // everytime 'readyState' fires, our function runs. 4 is the value when browser has receive all of the data from server. -->
    if(xhr.status === 200) {      // 200 means okay, the successful request. -->
