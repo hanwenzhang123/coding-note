@@ -36,6 +36,8 @@ async function getPeopleInSpace(url){
   return Promise.all(profiles);   // here is each of the map call.
 }
 
+
+//async-await example
 btn.addEventListener('click', async (event) => {
   event.target.textContent = 'Loading...';
 
@@ -44,6 +46,14 @@ btn.addEventListener('click', async (event) => {
   event.target.remove();
 });
 
+//better way writing it without the asnc-await
+btn.addEventListener('click', event => {
+  event.target.textContent = 'Loading...';
+
+  getPeopleInSpace(astrosUrl)
+    .then(generateHTML)
+    .finally( () =>  event.target.remove()  )
+});
 
 
 
