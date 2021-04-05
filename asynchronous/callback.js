@@ -21,6 +21,13 @@ function getJSON(url, callback) {   //this represents a function that is going t
   xhr.send();
 }
 
+function getProfiles(json){
+    json.people.map(person => {     //the name - data, json, item, x, el (for element) - is arbitrary, meaning it doesn't matter what you call it. For...of or forEach were better alternatives
+    getJson(wikiUrl + person.name, generateHTML);
+   });
+};
+  
+
 // Generate the markup for each profile
 function generateHTML(data) {
   const section = document.createElement('section');
@@ -43,12 +50,8 @@ function generateHTML(data) {
   }
 }
 
-btn.addEventListener('click', (event) => {
-  getJSON(astrosUrl, () => {    //callback here receive the parent function passed to here from getJSON
-  json.people.map(person => {
-    getJson(wikiUrl + person.name, generateHTML);
-      });
-    });
+btn.addEventListener('click', (event) => {    
+  getJSON(astrosUrl, getProfiles);     //callback here receive the parent function passed to here from getJSON
   event.target.remove();
   });
 
