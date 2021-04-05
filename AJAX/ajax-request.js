@@ -19,7 +19,7 @@ const xhr = new XMLHttpRequest();   // 1. create the object, each request needs 
 //onreadystatechange - hold number 0 to 4 (0-3 early stage, 4 is ready to send) - everytime it fires, our function runs
 xhr.onreadystatechange = function( ){      // 2. create a callback to response the request, it is what you want the browser to run, server send back to response -->
   if(xhr.readyState === 4){       // everytime 'readyState' fires, our function runs. 4 is the value when browser has receive all of the data from server. -->
-   if(xhr.status === 200) {      // 200 means okay, the successful request. -->
+   if(xhr.status === 200) {      // 200 means okay, the successful request. like 401 - no permission, 404 - not found, 500 - server error
     document.getElementById('ajax').innerHTML = xhr.responseText;     // the information that response send back -->
   } else {
     alert(xhr.statusText);
@@ -28,7 +28,7 @@ xhr.onreadystatechange = function( ){      // 2. create a callback to response t
   if (xhr.status === 404){
         //file not found
   } else if (xhr.status === 500){
-      //server had a problem
+      //server had a problem }
       */
 xhr.open('GET', 'sidebar.html');       //3.open request-->
 function sendAJAX(){      //4. send request -->
