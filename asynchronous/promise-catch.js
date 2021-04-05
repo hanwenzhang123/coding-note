@@ -1,16 +1,3 @@
-/*
-promises is an object representing the eventual completion or failure of an asynchronous operation, the promis of eventual value may or may not workout
-always be one of thee 3 states: 
- - pending:	the default state of a promis, waiting period
- - fulfilled:	the operation completede successfully
- - rejected: the operation failed
- 
- Working with promises
-  - create a promise instancee using the Promis() constructor
-  - Define what should happne when the promis is fulfilled or rejected
-  - Consume the value of a fulfilled promise, or provide a rejection reason for a rejected promise
-  */
-
 const breakfastPromise = new Promise ((resolve, reject) => {
   setTimeout(() => {
     resolve('Your order is ready. Come and get it!');
