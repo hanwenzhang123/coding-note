@@ -1,4 +1,6 @@
 
+//in order to use json data, we need to take the string and convert it into javascript, this is a process known as parsing. json itselt is a plain text string
+
 var xhr = new XMLHttpRequest();
 xhr.onreadystatechange = function () {
   if (xhr.readyState === 4){
