@@ -21,7 +21,12 @@ always be one of thee 3 states:
   - Consume the value of a fulfilled promise, or provide a rejection reason for a rejected promise
 */
 
+A promise represents the eventual completion of an asynchronous operation
 
+const dataPromise = new Promise();
 
+dataPromise
+  .then( data => console.log(data) ) 
+ // gets the resolved value out of the promise
 
 
