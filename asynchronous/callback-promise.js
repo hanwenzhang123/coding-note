@@ -43,3 +43,33 @@ function getProfiles(json) {
 //promise.all will reject as soon as any of the promises passed to it failed, it rejects the entire promise. 
 
 
+
+// Promise.all takes an array of promises and resolves as soon as all of them resolve individually.
+// When all promises resolve you then do something...
+
+const promise1 = Promise.resolve(3);
+const promise2 = 42;
+const promise3 = new Promise((resolve, reject) => {
+  setTimeout(resolve, 100, 'foo');
+});
+
+Promise.all([promise1, promise2, promise3]).then((values) => {
+  console.log(values);
+});
+// expected output: Array [3, 42, "foo"]
+
+
+//When one promise rejects then Promise.all doesn't resolve.
+
+const promise1 = Promise.resolve(3);
+const promise2 = 42;
+const promise3 = new Promise((resolve, reject) => {
+  setTimeout(reject, 100, 'foo');
+});
+
+Promise.all([promise1, promise2, promise3]).then((values) => {
+  console.log(values);
+}).catch(function(err) {
+  console.log('Error'); // some coding error in handling happened
+});
+// expected output: 'Error'
