@@ -1,0 +1,18 @@
+linking to a specific section of the web page - same page
+
+2 steps process
+1. identify the section you want to link to - (set id)
+2. set navigate, with # then the id you want to link to
+<li><a href="#~">  </a></li>
+
+// id is unique, no ids in html have same value
+
+
+
+linking to a specific section of the web page - different page
+
+need the full path
+<li><a href="#~">  </a></li>
+
+
+'back to top' link
