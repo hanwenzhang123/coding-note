@@ -1,4 +1,5 @@
-//handle all fetch requests, always use in async and await to handle error
+// most common way to handle exceptions(errors) when using async/await, handle all fetch requests
+
 
 async function getJSON(url){
   try{
