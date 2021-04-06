@@ -2,6 +2,7 @@
 // that promise resolves with the value returned by the async function
 // or rejects with an error thrown from within the function
 // async/await is syntactic sugar for creating functions that return and wait for promises, it is supplement to promises but not replacement
+// benefit: you wirte asynchronous code in a way that resembles synchrnous code
 
 async function fetchData(url) {
   const response = await fetch(url);
