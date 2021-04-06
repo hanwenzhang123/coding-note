@@ -25,27 +25,3 @@ const request = https.get("https://teamtreehouse.com/chalkers.json", response =>
 
   request.on('error', error => console.error());
 
-
-
-response.on('end', () => { 
-  try {
-   // Parse the data
-  const profile = JSON.parse(body);                            
-    // Print the data
-  printMessage(username, profile.badges.length, profile.points.JavaScript);
-     } catch (error) {
-     console.log(error.message);
-    }});
-//catch (error) {printError(error); } after using the error function as below
-
-
-//print error message function that we will only need one function for all
-function printError(error){
-  console.error(error.message);
-}     // then we can update where all the console.errors are with printError(error)
-
-request.on('error', printError);
-  } catch (error) {
-    printError(error);
-  }
-}
