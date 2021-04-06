@@ -19,9 +19,11 @@ catch (error) { console.error(error.message); }
 // On a new line use the on method to listen for the error event. Pass in a callback function with one parameter of error.
 // Finally, in the error callback, use the error method on the console to print out the error message.
 
+
 const https = require("https");
 
 const request = https.get("https://teamtreehouse.com/chalkers.json", response => {
   console.log(response.statusCode);
 });
   request.on('error', error => console.error());
+
