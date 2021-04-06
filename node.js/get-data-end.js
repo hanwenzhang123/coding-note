@@ -32,3 +32,27 @@ readable.on('end', () => {
   console.log('There will be no more data.');
 });
     
+
+    
+    
+//exercise
+    const https = require("https");
+const request = https.get("https://teamtreehouse.com/chalkers.json", response => {
+    let responseBody = "";
+
+    response.on("data", dataChunk => {
+responseBody += dataChunk.toString();
+    });
+
+    response.on("end", () => {     // Without renaming any of the variables, modify the data callback to concatenate the stream of data to the responseBody.
+        console.log(responseBody); //the callback gets executed when the response has fully finished
+    });
+
+});
+
+request.on("error", error => {
+    console.error(error.message);
+});
+    
+    
+    
