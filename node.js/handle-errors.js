@@ -27,3 +27,7 @@ const request = https.get("https://teamtreehouse.com/chalkers.json", response =>
 });
   request.on('error', error => console.error());
 
+
+
+//to run printError() if there is an error on a request, use the following:
+request.on( 'error', error => printError(error) );
