@@ -1,3 +1,4 @@
+//sending content type headers in node
 response.writeHead(statusCode[, statusMessage][, headers])
 
 Returns a reference to the ServerResponse, so that calls can be chained.
@@ -18,6 +19,11 @@ response
 
 const commonHeaders = {'Content-Type': 'text/html'};    // original as text/plain
 
-HTTP server - GET and POST
 
+
+//HTTP POST body
+There are two common HTTP methods or ways to communicate with an HTTP server - GET and POST
+Get - you are retrieving information from a website address
+POST - encodes the form content into a query string at the end of the URL, where POST sends the form contents as part of the request body
+When you create a form, you can specify which method to use, GET or POST
 
