@@ -1,0 +1,7 @@
+Start a Simple Web Server from Any Directory on Your Computer
+Open your Terminal (or console), navigate to the directory you want to use and enter the following command:
+
+python -m SimpleHTTPServer 8000
+You can view your site at this address: localhost:8000.
+
+Reference: How to use SimpleHTTPServer
