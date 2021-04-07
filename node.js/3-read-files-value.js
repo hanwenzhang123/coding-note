@@ -5,6 +5,7 @@ function mergeValues(values, content) {
   //Cycle over the keys
   for(var key in values) {
     //Replace all {{key}} with the value from the values object
+    //value.avatarUrl === values['avatarUrl']
     content = content.replace("{{" + key + "}}", values[key]);
   }
   //return merged content
@@ -24,6 +25,7 @@ module.exports.view = view;
 
 
 
+
 // Pick the blocking version of a method you can use to read a file?
 // Blocking means Node.js waits for the file to be loaded before executing further code.
 // //readFileSync
@@ -38,16 +40,46 @@ module.exports.view = view;
   
 //   Given the following code what will happen?   
 
-//   var fs = require("fs");
+  var fs = require("fs");
 
-// fs.readFile('/etc/this/file/exists.txt', function (err, data) {
-//   if (err) throw err;
-//   console.log("File read.");
-// });
+fs.readFile('/etc/this/file/exists.txt', function (err, data) {
+  if (err) throw err;
+  console.log("File read.");
+});
 
-// console.log("I love bees.");
+console.log("I love bees.");
 //    Remember readFile is asynchronous and the callback will be executed after the file is read.
 
   //I love bees. 
 //File read
 
+
+
+
+
+// Complete the implementation of the merge method in utilities.js file. 
+// You should be able to pass in a string with placeholders with percent signs (%) surrounding them. 
+// The second parameter should be an object with values to be inserted in to the placeholders. 
+
+var utilities = require("./utilities");
+
+var mailValues = {};
+
+mailValues.first_name = "Janet";
+
+var emailTemplate = "Hi %first_name%! Thanks for completing this code challenge :)";
+
+var mergedContent = utilities.merge(emailTemplate, mailValues);
+
+//mergedContent === "Hi Janet! Thanks for completing this code challenge :)";
+
+
+
+function merge(content, values) {
+  for (key in values) {
+    content = content.replace("%"+key+"%", values[key]);
+  }
+  return content;
+}
+
+module.exports.merge = merge;
