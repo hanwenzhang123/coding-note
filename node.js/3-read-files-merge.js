@@ -83,3 +83,6 @@ function merge(content, values) {
 }
 
 module.exports.merge = merge;
+
+
+//merge the values with the content.
