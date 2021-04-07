@@ -24,28 +24,30 @@ module.exports.view = view;
 
 
 
-Pick the blocking version of a method you can use to read a file?
-Blocking means Node.js waits for the file to be loaded before executing further code.
-//readFileSync
+// Pick the blocking version of a method you can use to read a file?
+// Blocking means Node.js waits for the file to be loaded before executing further code.
+// //readFileSync
 
-If you wanted to read from a file asynchronously what method would you use?
-  //readFile
+// If you wanted to read from a file asynchronously what method would you use?
+//   //readFile
   
-  How do you require the File System module?
-  //require('fs')
+//   How do you require the File System module?
+//   //require('fs')
   
   
   
-  Given the following code what will happen?   //I love bees. File read
-  var fs = require("fs");
+//   Given the following code what will happen?   
 
-fs.readFile('/etc/this/file/exists.txt', function (err, data) {
-  if (err) throw err;
-  console.log("File read.");
-});
+//   var fs = require("fs");
 
-console.log("I love bees.");
-   Remember readFile is asynchronous and the callback will be executed after the file is read.
+// fs.readFile('/etc/this/file/exists.txt', function (err, data) {
+//   if (err) throw err;
+//   console.log("File read.");
+// });
 
+// console.log("I love bees.");
+//    Remember readFile is asynchronous and the callback will be executed after the file is read.
 
+  //I love bees. 
+//File read
 
