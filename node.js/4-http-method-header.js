@@ -12,6 +12,10 @@ response
   .end(body);
 
 
+// http.STATUS_CODES only on http not https!!!
+// example: const statusCodeError = new Error ('there was an error getting the message ${readableQuery}. (${http.STATUS_CODES [response.statusCode]})`);
+
+
 // internet media type, wikipedia, check the list of common media types, for our project, type text, text/html
 // As part of HTTP specification, or how servers and browsers agrees to talk to each other, there are values that are hidden from the user called headers. 
 // These headers can be programmatically created by the clients and the service. once each headed that the service ends, it is called Content Type.
