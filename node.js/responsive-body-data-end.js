@@ -42,7 +42,7 @@ const request = https.get("https://teamtreehouse.com/chalkers.json", response =>
 
     response.on("data", dataChunk => {
 responseBody += dataChunk.toString();
-    });
+    }); // take the stream of data that's being passed as an argument into the callback (when the "data" event is fired) and concatenate it to the response (which is the empty string stored into the responseBody variable).
 
     response.on("end", () => {     // Without renaming any of the variables, modify the data callback to concatenate the stream of data to the responseBody.
         console.log(responseBody); //the callback gets executed when the response has fully finished
