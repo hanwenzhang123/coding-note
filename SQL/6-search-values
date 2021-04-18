@@ -21,7 +21,6 @@ SELECT title FROM courses WHERE topic NOT IN ("SQL", "NoSQL");
 
 
 
-
 Searching within a range of values:   BETWEEN <minimum> and <maximum>
 ( you do not need to think about the operator by using between and )
 
