@@ -1,4 +1,4 @@
-Searching Within a Set of Values: Compare multiple values using IN(~~~)
+Searching Within a Set of Values: IN - Compare multiple values using IN(~~~)
 
 SELECT first_name, email FROM patrons WHERE library_id = 'MCL1001' ORR library_id = 'MCL1100' OR library_id = 'MCL1011';
 SELECT first_name, email FROM patrons WHERE library_id IN ('MCL1001', 'MCL1100', 'MCL1011');
@@ -18,3 +18,17 @@ Examples:
 SELECT answer FROM answers WHERE id IN (7, 42);
 SELECT * FROM products WHERE category NOT IN ("Electronics");
 SELECT title FROM courses WHERE topic NOT IN ("SQL", "NoSQL");
+
+
+
+
+Searching within a range of values:   BETWEEN
+SELEC title, author
+
+
+SELECT <columns> FROM <table> WHERE <column> BETWEEN <lesser value> AND <greater value>;
+
+Examples:
+SELECT * FROM movies WHERE release_year BETWEEN 2000 AND 2010;
+SELECT name, description FROM products WHERE price BETWEEN 9.99 AND 19.99;
+SELECT name, appointment_date FROM appointments WHERE appointment_date BETWEEN "2015-01-01" AND "2015-01-07";
