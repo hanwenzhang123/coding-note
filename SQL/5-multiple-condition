@@ -20,6 +20,3 @@ SELECT * FROM movies WHERE title = "The Matrix" OR title = "The Matrix Reloaded"
 
 SELECT country FROM countries WHERE population < 1000000 OR population > 100000000;
 
-
-
-
