@@ -1,0 +1,23 @@
+SELECT * FROM books WHERE first_published >= 2005;
+
+
+Relational Operators
+There are several relational operators you can use:
+
+< less than
+<= less than or equal to
+> greater than
+>= greater than or equal to
+These are primarily used to compare numeric and date/time types.
+
+SQL Used
+SELECT <columns> FROM <table> WHERE <column name> < <value>;
+SELECT <columns> FROM <table> WHERE <column name> <= <value>;
+SELECT <columns> FROM <table> WHERE <column name> > <value>;
+SELECT <columns> FROM <table> WHERE <column name> >= <value>;
+
+Examples:
+SELECT first_name, last_name FROM users WHERE date_of_birth < '1998-12-01';
+SELECT title AS "Book Title", author AS Author FROM books WHERE year_released <= 2015;
+SELECT name, description FROM products WHERE price > 9.99;
+SELECT title FROM movies WHERE release_year >= 2000;
