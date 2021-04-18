@@ -1,0 +1,11 @@
+Query 2 tables and bring information from both by using "," seperate them
+Set up the relationship between the two table in the WHERE clause by using "."
+
+
+SELECT * FROM loans, books
+ WHERE loans.book_id = books.id
+- data from both tables are returned, the tables are related
+
+
+SELECT * FROM <table 1>, <table 2>
+ WHERE <table 1>.<table 1 column> = <table 2>.<table 2 column>
