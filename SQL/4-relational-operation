@@ -1,5 +1,6 @@
 SELECT * FROM books WHERE first_published >= 2005;
-
+SELECT * FROM loans WHERE return_by > '2015-12-18';
+SELECT first_name, email FROM patrons WHERE id = 1 OR id = 3;
 
 Relational Operators
 There are several relational operators you can use:
