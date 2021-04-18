@@ -32,3 +32,6 @@ Examples:
 SELECT * FROM movies WHERE release_year BETWEEN 2000 AND 2010;
 SELECT name, description FROM products WHERE price BETWEEN 9.99 AND 19.99;
 SELECT name, appointment_date FROM appointments WHERE appointment_date BETWEEN "2015-01-01" AND "2015-01-07";
+
+
+ 
