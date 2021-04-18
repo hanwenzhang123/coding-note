@@ -1,11 +1,10 @@
 Searching matched value
 
 A WHERE Clause
-SELECT <columns> FROM <table> WHERE <condition>;
+SELECT <columns> FROM <table> WHERE <condition> - <column> <operator> <value>
 
 SELECT title, author FROM boooks WHERE first_published = 1997;
 SELECT title, first_published FROM boooks WHERE author = 'J.K. Rowling';
-          <column>       <operator>        <value>
 
 
 
