@@ -1,5 +1,13 @@
 Syntax The vocabulary and grammatical rules surrounding the structure of your code.
 Keywords The vocabulary words of a programming language used to issue commands to a computer.
+Keywords in lower case also work but upper case is standardized in the industry to distinguish.
+
+
+SQL Comments:
+Single line comments start with --.
+Multi-line comments start with /* and end with */.
+
+
 
 SELECT * FROM <table name>;
 The asterisk or star symbol (*) means all columns.
@@ -12,6 +20,7 @@ SELECT * FROM users;
 SELECT * FROM countries;
 
 
+
 Retrieving a single column:
 
 SELECT <column name> FROM <table name>; 
@@ -21,6 +30,7 @@ SELECT email FROM users;
 SELECT first_name FROM users;
 SELECT name FROM products;
 SELECT zip_code FROM addresses;
+
 
 
 Retrieving multiple columns: (select and sort)
