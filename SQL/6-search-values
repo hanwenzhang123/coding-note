@@ -22,9 +22,13 @@ SELECT title FROM courses WHERE topic NOT IN ("SQL", "NoSQL");
 
 
 
-Searching within a range of values:   BETWEEN
-SELEC title, author
+Searching within a range of values:   BETWEEN <minimum> and <maximum>
+( you do not need to think about the operator by using between and )
 
+SELECT title, author FROM books WHERE first_published >= 1800 AND first_published <= 1899;
+SELECT title, author FROM books WHERE first_published BETWEEN 1800 AND 1899; 
+SELECT * FROM loans WHERE loaned_on BETWEEN "2015-12-13" AND "2015-12-19";
+SELECT * FROM results WHERE played_on BETWEEN "2015-09-01" and "2015-09-30";
 
 SELECT <columns> FROM <table> WHERE <column> BETWEEN <lesser value> AND <greater value>;
 
@@ -34,4 +38,3 @@ SELECT name, description FROM products WHERE price BETWEEN 9.99 AND 19.99;
 SELECT name, appointment_date FROM appointments WHERE appointment_date BETWEEN "2015-01-01" AND "2015-01-07";
 
 
- 
