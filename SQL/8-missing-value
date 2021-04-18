@@ -10,3 +10,5 @@ SELECT <columns> FROM <table> WHERE <column> is NULL;
 
 to filter out missing values
 SELECT <columns> FROM <table> WHERE <column> is NOT NULL;
+
+ 
