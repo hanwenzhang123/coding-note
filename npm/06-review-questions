@@ -1,0 +1,37 @@
+Which npm command do you use to install all dependencies if you have a package.json file?
+install
+
+Which of these commands could result in the most system wide issues?
+npm update -g
+
+What npm command would I use to see if there are any packages that need updating without installing the updates?
+outdated
+
+Which command will ignore developer dependencies when you use npm install?
+NODE_ENV=product npm install
+
+
+What flag do you use to save devDependencies to your package.json file?
+--save-dev
+
+Can you guess the command to check which of the global packages are out of date?
+npm outdated-g
+
+
+The carat (^) symbol updated the MINOR version
+The tilde (~) symbol updated the PATCH version
+
+Given the following package.json npm could theoretically install which of the following versions of mocha.
+    "mocha": "~2.2.1"
+    2.2.2
+    
+Given the following package.json npm could theoretically install which of the following versions of express.
+    "express": "^4.0.0"
+    4.5.0
+    
+    
+    
+
+Install npm-check-updates.
+Run npm-check-updates to list what packages are out of date (basically the same thing as running npm outdated )
+Run npm-check-updates -u to update all the versions in your package.json (this is the magic sauce)
