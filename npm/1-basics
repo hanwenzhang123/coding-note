@@ -1,0 +1,20 @@
+what is npm?
+A JavaScript package manager, it is commnly used for installing packages for Node.js
+the package manager let you install, update and uninstall packages through a standardized way.
+
+what are packages?
+packages are bundles of software
+npm packages are mainly javascript code
+npm packages for node.js projects are called modules
+
+
+Choosing a Package
+There are a number of indicators that you can use to determine which package to use.
+
+Popularity on npm – the number of downloads
+Release Date – the more recent the better
+Number of Releases – the more frequent the better
+Passing Tests - if there's tests passing
+Number of Open Issues – the less the better
+Popularity on GitHub – The more Stars, Forks and Watches the better
+Number of Contributors on GitHub – more eyes on the code the better
