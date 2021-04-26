@@ -1,5 +1,7 @@
 //Managing Dependencies in the package.json File
 A package.json file is the standard way to manage your dependencies in a project. 
+The dependencies value is used to specify any other modules that a given module (represented by the package.json) requires to work. 
+When you run npm install from the root folder of a given module, it will install any modules listed in that dependencies hash.
 
 //teacher'snode
 
@@ -88,23 +90,25 @@ bcrypt.genSalt(10, function(err, salt) {
 
 
 //mocha
+//install mocha package
 npm install mocha --save-dev    
 //mocha is testing requires a test holder
+/test
 
 //package.json
   "devDependencies": {
     "mocha": "^8.3.2"
   },
   "scripts": {
-    "test": "mocha"   //change here to mocha
+    "test": "mocha"   //change here to mocha to run mocha test
   },
   "author": "Hanwen Zhang",
   "license": "MIT"
 
-npm testing 
-npm install --python=python2
+npm test    //testing mocha 
 
-//node environment
+npm install --python=python2
+//with an node environment, only the dependencies that need to run, not the dev dependencies
 NODE_ENV=production npm install --python=python2
 
 
