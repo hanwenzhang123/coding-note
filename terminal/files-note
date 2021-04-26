@@ -1,0 +1,172 @@
+Let me make sure I'm in my workspace directory: cd ~/workspace
+First up is the cp command, which lets you copy files and directories.
+If we list the files in this directory, we'll see a bird.txt file: ls
+Suppose I want another bird.
+I run the cp command. I give it two arguments: the name of the file I want to copy, and the name of the file I want to copy it to: cp bird.txt pigeon.txt
+If I run the ls command again, we'll see both the original bird.txt file, and the new pigeon.txt file: ls
+And if I print the contents of pigeon.txt, we'll see those have been copied over, too: cat pigeon.txt
+treehouse:~/workspace/library/non-fiction$ cd ~/workspace
+treehouse:~/workspace$ ls
+bird.txt  cart.txt  library  mall  offices  statue.txt
+treehouse:~/workspace$ cp bird.txt pigeon.txt
+treehouse:~/workspace$ ls
+bird.txt  cart.txt  library  mall  offices  pigeon.txt  statue.txt
+treehouse:~/workspace$ cat pigeon.txt
+There is a bird here, looking up at the statue with interest.
+cp is an important command. It's one of those commands you'll be using a lot. That's why its name is abbreviated, so you can type it more quickly.
+You can use cp to copy files into other directories, too.
+I can copy bird.txt into the mall directory by giving the directory name as the second argument to cp: cp bird.txt mall/
+As always, the directory name will work with or without a slash following it.
+Now let me change into the mall directory: cd mall/
+And list its contents: ls
+You'll see a bird.txt file in this directory as well.
+treehouse:~/workspace$ cp bird.txt mall/
+treehouse:~/workspace$ cd mall/
+treehouse:~/workspace/mall$ ls
+bird.txt  dullards  map.txt  starbunks
+You can also copy files to the parent directory.
+Let me change back to the workspace directory: cd ..
+And now I'll copy the bird.txt file again, specifying the parent directory as the target: cp bird.txt ..
+If I change to the parent directory and list its contents, you'll see another bird.txt file there.
+treehouse:~/workspace/mall$ cd ..
+treehouse:~/workspace$ cp bird.txt ..
+treehouse:~/workspace$ cd ..
+treehouse:~$ ls
+bird.txt  workspace
+You can use cp to copy directories, too.
+Let me change back to the workspace directory: cd workspace
+ls
+Suppose I want to make a copy of the offices directory.
+But I can't just type cp offices/ more_offices: cp offices/ more_offices
+Normally, if you ask cp to copy a directory, it will skip it.
+But if I add the -r option to cp, it will work: cp -r offices/ more_offices
+ls
+You can see there's a more_offices directory here now.
+The -r option stands for recursive, as in "copy recursively".
+To do something recursively means to do it in a recurring or repeating fashion.
+In this case, it means that not only will the offices directory be copied, its contents and all of the contents of its subdirectories will be copied, too.
+Let me list the contents of the more_offices directory: ls more_offices/
+You can see its subdirectories have been copied over, too.
+Any files will get copied over too.
+If I list the contents of the more_offices/web_agency/mcgavren/ directory, you'll see a copy of the script file we saw earlier in the course: ls more_offices/web_agency/mcgavren/
+treehouse:~$ cd workspace
+treehouse:~/workspace$ ls
+bird.txt  cart.txt  library  mall  offices  pigeon.txt  statue.txt
+treehouse:~/workspace$ cp offices/ more_offices
+cp: omitting directory 'offices/'
+treehouse:~/workspace$ cp -r offices/ more_offices
+treehouse:~/workspace$ ls
+bird.txt  cart.txt  library  mall  more_offices  offices  pigeon.txt  statue.txt
+treehouse:~/workspace$ ls more_offices/
+dentist  lawyer  web_agency
+treehouse:~/workspace$ ls more_offices/web_agency/mcgavren/
+hello.sh
+What if you want to change a file's name, without copying it? In that case you'd use the mv command, which stands for "move".
+I can move the bird.txt file to sparrow.txt with mv bird.txt sparrow.txt: mv bird.txt sparrow.txt
+ls
+You can see there's no longer a file under the name bird.txt, but there is a file named sparrow.txt.
+treehouse:~/workspace$ ls
+bird.txt  cart.txt  library  mall  more_offices  offices  pigeon.txt  statue.txt
+treehouse:~/workspace$ mv bird.txt sparrow.txt
+treehouse:~/workspace$ ls
+cart.txt  library  mall  more_offices  offices  pigeon.txt  sparrow.txt  statue.txt
+If you specify a directory as a target, you can move a file into that directory.
+Let's say we want to move the hot dog cart to the mall.
+We'd run mv cart.txt mall/ (again, the trailing slash is optional): mv cart.txt mall/
+If I change to the mall directory and list its files, you can see the cart.txt file has been moved there.
+cd ..
+ls
+treehouse:~/workspace$ ls
+cart.txt  library  mall  more_offices  offices  pigeon.txt  sparrow.txt  statue.txt
+treehouse:~/workspace$ mv cart.txt mall/
+treehouse:~/workspace$ cd mall
+treehouse:~/workspace/mall$ ls
+bird.txt  cart.txt  dullards  map.txt  starbunks
+You can move multiple files into a single directory by giving multiple file names.
+For example, I can move both the pigeon.txt and sparrow.txt files into the mall directory with: mv pigeon.txt sparrow.txt mall/
+ls
+If I change into the mall directory and list it's contents, you can see that both the pigeon.txt and sparrow.txt files have been moved here.
+treehouse:~/workspace/mall$ cd ..
+treehouse:~/workspace$ ls
+library  mall  more_offices  offices  pigeon.txt  sparrow.txt  statue.txt
+treehouse:~/workspace$ mv pigeon.txt sparrow.txt mall/
+treehouse:~/workspace$ ls
+library  mall  more_offices  offices  statue.txt
+treehouse:~/workspace$ cd mall
+treehouse:~/workspace/mall$ ls
+bird.txt  cart.txt  dullards  map.txt  pigeon.txt  sparrow.txt  starbunks
+The mv command is one of many commands where wildcard expansion comes in handy.
+Suppose I want to move all these text files back to the parent directory.
+I could use the wildcard *.txt to find all of them: echo *.txt
+mv *.txt .. will take all of the .txt files in this directory, and move them to the parent directory: mv *.txt ..
+If I list the files here, you can see they've all been moved out of this directory.
+And if I change to the parent directory and list the files, you can see they've all been moved here.
+Whoops! It looks like I also moved the mall map to this directory. Let me move that back to the mall directory: mv map.txt mall
+treehouse:~/workspace/mall$ ls
+bird.txt  cart.txt  dullards  map.txt  pigeon.txt  sparrow.txt  starbunks
+treehouse:~/workspace/mall$ echo *.txt
+bird.txt cart.txt map.txt pigeon.txt sparrow.txt
+treehouse:~/workspace/mall$ mv *.txt ..
+treehouse:~/workspace/mall$ ls
+dullards  starbunks
+treehouse:~/workspace/mall$ cd ..
+treehouse:~/workspace$ ls
+bird.txt  cart.txt  library  mall  map.txt  more_offices  offices  pigeon.txt  sparrow.txt  statue.txt
+treehouse:~/workspace$ mv map.txt mall/
+ls
+This workspace directory is getting a little crowded. Let's remove some of these files.
+We do this with the rm command, which stands for "remove".
+Before we use this command, let me give you a word of warning: there is no undo for removing files!
+The files don't go to a "Trash" folder or anything like that; they're simply gone.
+And on Unix-like systems, their data is usually scrubbed from the disk immediately, meaning there's no such thing as a file recovery program.
+So when using the rm command, be sure you're removing the correct files!
+Let's try removing the bird.txt file: rm bird.txt
+If I list the directory contents again, you can see the bird.txt file is gone.
+treehouse:~/workspace$ ls
+bird.txt  cart.txt  library  mall  more_offices  offices  pigeon.txt  sparrow.txt  statue.txt
+treehouse:~/workspace$ rm bird.txt
+treehouse:~/workspace$ ls
+cart.txt  library  mall  more_offices  offices  pigeon.txt  sparrow.txt  statue.txt
+The rm file can also remove directories.
+Let's try deleting this more_offices directory we copied.
+Just like with the cp command, the rm command won't work on directories ordinarily: rm more_offices/
+But just like the cp command, the rm command has a -r option that causes it to recursively remove a directory, all its subdirectories, and all their files: rm -r more_offices
+If I list files again, you can see the more_offices directory is gone now, along with all the directories and files it contained.
+treehouse:~/workspace$ ls
+cart.txt  library  mall  more_offices  offices  pigeon.txt  sparrow.txt  statue.txt
+treehouse:~/workspace$ rm more_offices/
+rm: cannot remove 'more_offices/': Is a directory
+treehouse:~/workspace$ rm -r more_offices
+treehouse:~/workspace$ ls
+cart.txt  library  mall  offices  pigeon.txt  sparrow.txt  statue.txt
+One last command. You can use the mkdir command to make directories.
+I can make a park directory with mkdir park: mkdir park
+ls
+I can change into the new directory, list its contents, make new subdirectories, anything I can do with any other directory.
+cd ..
+treehouse:~/workspace$ ls
+cart.txt  library  mall  offices  pigeon.txt  sparrow.txt  statue.txt
+treehouse:~/workspace$ mkdir park
+treehouse:~/workspace$ ls
+cart.txt  library  mall  offices  park  pigeon.txt  sparrow.txt  statue.txt
+treehouse:~/workspace$ cd park
+treehouse:~/workspace/park$ cd ..
+If you pass the -p option to mkdir, it will make parent directories for the directory you want to create, if they don't exist.
+For example, let's say I want a playground directory inside my park directory, and a toys directory inside that.
+I can run mkdir -p park/playground/toys: mkdir -p park/playground/toys
+ls
+The park directory already exists, so that's unchanged.
+But there was no playground directory inside the park directory, so that's been created for us.
+cd park/, ls
+And inside the playground directory, a toys directory has been created.
+cd playground/, ls
+We're now free to fill these playground and toys directories with files, or whatever else we want.
+treehouse:~/workspace$ mkdir -p park/playground/toys
+treehouse:~/workspace$ ls
+cart.txt  library  mall  offices  park  pigeon.txt  sparrow.txt  statue.txt
+treehouse:~/workspace$ cd park/
+treehouse:~/workspace/park$ ls
+playground
+treehouse:~/workspace/park$ cd playground/
+treehouse:~/workspace/park/playground$ ls
+toys

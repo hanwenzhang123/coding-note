@@ -1,0 +1,40 @@
+What is an relative path? A path that relative to the current directory
+
+What is an absolute path? A path that starts at the root directory
+
+
+1.
+Fill in the blank to complete the command to print the contents of the resume.txt file within the documents directory.
+
+Notice that you are not currently in the documents directory; you will need to include that as part of the path!
+
+treehouse:~/workspace$ ls
+documents  games  images
+treehouse:~/workspace$ ls documents
+profile.txt  resume.txt
+treehouse:~/workspace$ cat documents/resume.txt
+
+
+2.
+Fill in the blank to complete a command to change to the macpan directory within the games directory.
+
+Notice that we are currently in the workspace directory. We want to change to the macpan directory in a single command, so you'll need to use a relative path that includes the games directory...
+
+treehouse:~/workspace$ pwd
+/home/treehouse/workspace/
+treehouse:~/workspace$ ls
+documents  games  images
+treehouse:~/workspace$ ls games
+dugdig  gagala  macpan
+treehouse:~/workspace$ cd games/macpan
+
+
+3.
+Change to the root directory.
+treehouse:~/workspace$ cd /
+
+4. 
+Fill in the blank to complete the command to change to the usr directory within the root directory.
+treehouse:~/workspace$ ls /
+dev  etc  home  opt  usr
+treehouse:~/workspace$ cd /usr
