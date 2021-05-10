@@ -1,9 +1,0 @@
-JSON - JavaScript Object Notation
-
-
-Client Browser -> Request GET -> Your Server -> Request through API (Path, Parameter) -> Someone Else's Server -> Response through API (DATA) -> Your Server -> Response POST -> Client Browser
-
-When doing https request, make sure your url starts with https:// not http://
-
-const url = 'https://api.openweathermap.org/data/2.5/weather?q=NewYork&appid=195948cc05953e4976469ce55ec3325d';
-  
