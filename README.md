@@ -1,5 +1,6 @@
 # coding-note
-JSON - Mailchimp Server as example
+JSON - Express.js
+Mailchimp Server as example
 ```JavaScript
 const express = require('express');
 const bodyParser = require('body-parser');
