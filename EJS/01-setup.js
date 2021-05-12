@@ -5,10 +5,12 @@
 
 const express = require('express');
 const bodyParser = require("body-parser");
+const path = require('path');       //path with the specific join()
 
 const app = express();
 
 app.set('view engine', 'ejs');    //ejs setup
+app.set('views', path.join(__dirname, '/views');    //join the full path of current file to get /views, so you can access anywhere
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static('public'));    // the stylesheet
