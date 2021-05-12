@@ -121,3 +121,11 @@ app.listen(3000, () => {
 // PATCH /comments/:id - Update one comment
 // DELETE /comments/:id - Destroy one comment
 
+
+Express - method-override
+$ npm install method-override
+http://expressjs.com/en/resources/middleware/method-override.html
+
+npm - uuid
+$ npm install uuid
+https://www.npmjs.com/package/uuid
