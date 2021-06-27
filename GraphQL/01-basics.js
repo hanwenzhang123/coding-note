@@ -14,8 +14,7 @@ type Studio {
   location: String!
 }
 
-quert{    //GraphQL allows us to nest complex data in a single request
-
+quert{    //query declaration
   movieById(id: "gone-with-the-wind){
             title
             studio {
@@ -24,6 +23,7 @@ quert{    //GraphQL allows us to nest complex data in a single request
             }
   }
 } 
+//GraphQL allows us to nest complex data in a single request
 
 Query - Queries specify which endpoints we want to call, how we want the response to look
 Fields - Properties that comprise the shape of a response
