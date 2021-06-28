@@ -5,6 +5,9 @@ Matched Pattern | Character
 [0-9] | \d
 [A-Za-z0-9] | \w
 [ \t\r\n\f] | \s
+Not Digits | \D
+Not Words | \W
+Not Whitespace | \S
 Any Character | .
 Zero or more | *
 One or more | +
@@ -16,9 +19,3 @@ nested character set | [^]
 match any character except @  | [^@]
 match any character excepted @ and . | [^@.]
 or, '||' in programming | '|'
----
-Character | Opposite
---------------- | ----------------
-\d digit | \D  not digits
-\w word | \W  not words
-\s whitespace | \S  not whitespace
