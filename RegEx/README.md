@@ -19,3 +19,6 @@ nested character set | [^]
 match any character except @  | [^@]
 match any character excepted @ and . | [^@.]
 alternation, or | \|
+treat as regular character | \
+matches "subsub" | (sub){2}
+matches "pat" and "subpat" | (sub)?pat
