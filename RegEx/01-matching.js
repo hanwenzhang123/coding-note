@@ -11,6 +11,9 @@ toyboats? ('s' is optional but if appear, only appears once)
 toy ?boa?ts? (toyboat, toyboats, toy bots, toy boats)
 [Ttj]oy[ -]?[Bb]oats? (everything in [] works)
 
+colou/r
+color
+colour
 
 //Matching Character Ranges
 match ranges of characters such as a-z, A-Z or 0-9.
