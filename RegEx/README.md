@@ -15,7 +15,7 @@ Between 3 and 5 | {3,5}
 nested character set | [^]
 match any character except @  | [^@]
 match any character excepted @ and . | [^@.]
-\
+-------------------
 Character | Opposite
 --------------- | ----------------
 \d digit | \D  not digits
