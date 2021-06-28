@@ -57,9 +57,49 @@ query {
 
 Passing in Variables
 
+fragment movieDetails on Movie{
+    id
+    title
+    tagline
+    revenue
+}
+
+query ($movieOneId:ID!, $movieTwoId:ID!) {
+  movieOne: movieById(  //Alias
+    movieId: $movieOneId
+    ){
+    ...movieDetails //fragment
+  }
+  movieTwo: movieById(  //Alias
+    movieId: $movieTwoId
+  ){
+   ...movieDetails  //fragment
+  }
+}
+
+//JSON
+{
+  "movieOneId": "movie_0"
+  "movieTwoId": "movie_1"
+}
+
 
 Specifying Default Variables
 
+query($year: Int = 2000) {	//default value 2000
+	randomMovieByYear(
+		year: $year
+		){
+		id
+		title
+		releaseYear
+	}
+}
+
+//JSON
+{
+  "year": 2001		//use this one, overwrite the 2000 one
+}
 
 //Question
 
