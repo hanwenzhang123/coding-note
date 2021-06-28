@@ -1,5 +1,5 @@
 https://regex101.com/
-\
+
 Matched Pattern | Character
 --------------- | ----------------
 [0-9] | \d
@@ -22,3 +22,5 @@ alternation, or | \|
 treat as regular character | \
 matches "subsub" | (sub){2}
 matches "pat" and "subpat" | (sub)?pat
+beginning of a string | ^
+end of a string | $
