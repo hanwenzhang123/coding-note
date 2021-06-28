@@ -102,4 +102,23 @@ query($year: Int = 2000) {	//default value 2000
 }
 
 //Question
+- Query variables help make queries more reusable by avoiding Hardcoding.
+- Fragments are particularly useful for selecting the same group of fields in multiple places.
+- Which of the following values will be sent to our backend for the “year” argument? 2016
+Which of the following values will be sent to our backend for the “year” argument? 2017 when year: null in /** Query variables */
+/** Query */
+query ($year:Int = 2017) {
+	randomMovieByYear (
+		year: $year
+	) {
+		id
+		title
+		releaseYear
+	}
+}
+
+/** Query variables */
+{
+	year: 2016
+}  
 
