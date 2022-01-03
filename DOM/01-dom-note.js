@@ -80,7 +80,9 @@ document.querySelector(selectors);
 document.querySelectorAll(selectors);
 
 //Adding Elements
-.createElement()
+.createElement("<HTML TAG>")
+.setAttribute("attribute", "value")
+.getAttribute
 
 //Change DOM Properties
 .textContent
