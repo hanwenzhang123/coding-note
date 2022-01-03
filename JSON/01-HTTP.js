@@ -24,9 +24,9 @@ url(domain + path) - http method (get, post, patch, put, delete) - http headers 
 data format: JSON data, FormData format, binary, etc
 
 //JSON
-//Data is transferred as "JSON" data between your client-side code and your backend ("the server").
+Data is transferred as "JSON" data between your client-side code and your backend ("the server").
 
-//JSON stands for JavaScript Object Notation
+//JSON stands for JavaScript Object Notation - must be wrapped with double quotes ("")
 {
     "name": "Max",
     "age": 30,
