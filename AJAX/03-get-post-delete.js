@@ -10,11 +10,22 @@ function sendHttpRequest(method, url, data) {
     xhr.open(method, url);
 
     xhr.responseType = 'json';
-
+    
     xhr.onload = function() {
-      resolve(xhr.response);    //resolve with our xhr.response data
+      if (xhr.status >= 200 && xhr.status < 300) {    //status code is good
+        resolve(xhr.response);   //resolve with our xhr.response data
+      } else {      //not a working status code
+        reject(new Error('Something went wrong!'));
+      }
       // const listOfPosts = JSON.parse(xhr.response);
     };
+
+    
+    xhr.onerror = function() {    //technically failed, like no internet connection
+      reject(new Error('Failed to send request!'));   //reject then we send error
+      console.log(xhr.response)
+      console.log(xhr.status)
+    }
 
     xhr.send(JSON.stringify(data));   //send the JSON data
   });
@@ -24,16 +35,20 @@ function sendHttpRequest(method, url, data) {
 
 //GET
 async function fetchPosts() {
-  const responseData = await sendHttpRequest(   //await the request
-    'GET',
-    'https://jsonplaceholder.typicode.com/posts'
-  );
-  const listOfPosts = responseData;   //the promise data we get
-  for (const post of listOfPosts) {   //the place we get the post available
-    const postEl = document.importNode(postTemplate.content, true);   //node from another document, true makes it deep clone
-    postEl.querySelector('h2').textContent = post.title.toUpperCase();
-    postEl.querySelector('p').textContent = post.body;
-    listElement.append(postEl);
+  try {
+    const responseData = await sendHttpRequest(   //await the request
+      'GET',
+      'https://jsonplaceholder.typicode.com/posts'
+    );
+    const listOfPosts = responseData;   //the promise data we get
+    for (const post of listOfPosts) {   //the place we get the post available
+      const postEl = document.importNode(postTemplate.content, true);   //node from another document, true makes it deep clone
+      postEl.querySelector('h2').textContent = post.title.toUpperCase();
+      postEl.querySelector('p').textContent = post.body;
+      listElement.append(postEl);
+    }
+  } catch (error) {     //catch the error
+    alert(error.message);   //display the error message to user
   }
 }
 
