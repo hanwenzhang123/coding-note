@@ -47,17 +47,21 @@ querySelector(), getElementById()
 - can be selected in various different ways via javascript
 - can be created and removed via javascript
 
+//Attributes vs Properties
+- often (but not always), attibutes are mapped to properties and "live synchronization" is set up
+- attributes (placed in HTML code, on element tags)
+- const input (input.id(live-sync), input.className(live-sync), input.value(1-way live-sync))
+- properties (automatically added on created DOM objects)
+
 //Styling DOM Elements
 via style property
 - direct target individual css style (on the element)
 - controls styles as inline styles on the element
 - style property names are based on css properties but have adjusted names (eg backgroundColor)
-
 via className
 - directly
 - set/control all classes at once
 - you can also control the id or other properties
-
 via classList
 - conveniently add, remove or toggle CSS classes
 - fine-grained control over classes that are added
