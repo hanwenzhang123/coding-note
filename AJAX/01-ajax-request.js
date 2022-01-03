@@ -1,3 +1,4 @@
+//json-parsing
 const xhr = new XMLHttpRequest();
 xhr.open("GET", "url");
 chr.responseType = "json"
@@ -5,6 +6,18 @@ xhr.onload = function(){  //alternative for addEvenListeer since not all the bro
   const listOfPosts = xhr.response;   //JSON.parse(xhr.response);
 }
 xhr.send();
+
+//JSON format - key and string values must have double quotes "" and seperate with ,
+//in order to use json data, we need to take the string and convert it into javascript, this is a process known as parsing. json itselt is a plain text string
+var xhr = new XMLHttpRequest();
+xhr.onreadystatechange = function () {
+  if (xhr.readyState === 4){
+   let employees = JSON.parse(xhr.responseText);  // read-only property, returns the text received from a server following a request being sent
+    console.log(employees);    
+    // JSON.parse take string try to convert it to the js object, json.parse won't work if formatting is wrong. parses a JSON string.
+  }
+  xhr.open('GET', 'data/employees.js')
+  xhr.send()
 
 /* AJAX - Asynchronous JavaScript And XML.  making request behind the scene
 4 steps of an AJAX request
@@ -64,9 +77,6 @@ function sendAJAX(){      //4. send request -->
   </div>
 </body>
 </html>
-
-  
-  
   
 //example 1 
   var request = new XMLHttpRequest();
@@ -78,8 +88,6 @@ request.onreadystatechange = function () {
 
 request.open('GET', 'footer.html'); 
 request.send()
-  
-  
   
   //example 2
   var xhr = new XMLHttpRequest();
