@@ -1,3 +1,11 @@
+const xhr = new XMLHttpRequest();
+xhr.open("GET", "url");
+chr.responseType = "json"
+xhr.onload = function(){  //alternative for addEvenListeer since not all the browsers allow it
+  const listOfPosts = xhr.response;   //JSON.parse(xhr.response);
+}
+xhr.send();
+
 /* AJAX - Asynchronous JavaScript And XML.  making request behind the scene
 4 steps of an AJAX request
 1. creates XMLHttpRequest Object    --> const ~ = new XMLHttpRequest()
