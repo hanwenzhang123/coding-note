@@ -1,4 +1,5 @@
 //fetch() - modern JS method, fetch resources asynchronously across the network.
+//XMLHttpRequest - older browser supports
 const listElement = document.querySelector('.posts');
 const postTemplate = document.getElementById('single-post');
 const form = document.querySelector('#new-post form');
