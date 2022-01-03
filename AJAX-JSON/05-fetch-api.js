@@ -33,19 +33,21 @@ function sendHttpRequest(method, url, data) {
   // });
 
   // return promise;
-  return fetch(url, {
-    method: method,
-    body: data,
+  return fetch(url, {   //pass a second parameter to configure the request
+    method: method,   //set the method
+    body: data,   //set the JSON data 
     // body: JSON.stringify(data),
     // headers: {
     //   'Content-Type': 'application/json'
     // }
   })
-    .then(response => {
+    .then(response => {   //have to do this extra .then() step to turn the streamed response body data into a snapshot which you can work
       if (response.status >= 200 && response.status < 300) {
-        return response.json();   //covert response body into a parsed body
-      } else {
-        return response.json().then(errData => {
+        return response.json();   //covert response body into a snapshot parsed body (from JSON to JS object array)
+        //response.text() - return plain text
+        //response.blob() - downloading file, access to the file
+      } else { 
+        return response.json().then(errData => {     //error data handling
           console.log(errData);
           throw new Error('Something went wrong - server-side.');
         });
@@ -57,7 +59,7 @@ function sendHttpRequest(method, url, data) {
     });
 }
 
-async function fetchPosts() {
+async function fetchPosts() { 
   try {
     const responseData = await sendHttpRequest(
       'GET',
