@@ -22,6 +22,7 @@ function sendHttpRequest(method, url, data) {
   return promise;
 }
 
+//GET
 async function fetchPosts() {
   const responseData = await sendHttpRequest(   //await the request
     'GET',
@@ -36,8 +37,9 @@ async function fetchPosts() {
   }
 }
 
+//POST
 async function createPost(title, content) {
-  const userId = Math.random();
+  const userId = Math.random();   //assign id to each post
   const post = {
     title: title,
     body: content,
@@ -49,11 +51,17 @@ async function createPost(title, content) {
 
 fetchButton.addEventListener('click', fetchPosts);
 form.addEventListener('submit', event => {
-  event.preventDefault();
+  event.preventDefault();   //for form
   const enteredTitle = event.currentTarget.querySelector('#title').value;
   const enteredContent = event.currentTarget.querySelector('#content').value;
 
-  createPost(enteredTitle, enteredContent);
+  createPost(enteredTitle, enteredContent);   //create the post based on the value
 });
 
-  
+//DELETE
+postList.addEventListener('click', event => {
+  if (event.target.tagName === 'BUTTON') {
+    const postId = event.target.closest('li').id;
+    sendHttpRequest('DELETE', `https://jsonplaceholder.typicode.com/posts/${postId}`);
+  }
+});
