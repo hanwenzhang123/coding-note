@@ -1,3 +1,4 @@
+//fetch() - modern JS method, fetch resources asynchronously across the network.
 const listElement = document.querySelector('.posts');
 const postTemplate = document.getElementById('single-post');
 const form = document.querySelector('#new-post form');
@@ -33,15 +34,15 @@ function sendHttpRequest(method, url, data) {
   // return promise;
   return fetch(url, {
     method: method,
-    // body: JSON.stringify(data),
     body: data,
+    // body: JSON.stringify(data),
     // headers: {
     //   'Content-Type': 'application/json'
     // }
   })
     .then(response => {
       if (response.status >= 200 && response.status < 300) {
-        return response.json();
+        return response.json();   //covert response body into a parsed body
       } else {
         return response.json().then(errData => {
           console.log(errData);
