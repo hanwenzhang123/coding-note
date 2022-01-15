@@ -38,12 +38,12 @@ const getData = () => {
 const sendData = () => {
   axios
     .post(
-      'https://reqres.in/api/register',
-      {
-        email: 'eve.holt@reqres.in'
+      'https://reqres.in/api/register',   //takes url where you want to send the data
+      {      //append the data
+        email: 'eve.holt@reqres.in' 
         // password: 'pistol'
       },
-      {
+      {      //no needs to configure the header manually
         // headers: {
         //   'Content-Type': 'application/json'
         // }
@@ -66,20 +66,20 @@ const getBtn = document.getElementById('get-btn');
 const postBtn = document.getElementById('post-btn');
 
 const sendHttpRequest = (method, url, data) => {
-  return fetch(url, {
+  return fetch(url, {   //fetch() - JS built-in function
     method: method,
     body: JSON.stringify(data),
     headers: data ? { 'Content-Type': 'application/json' } : {}
   }).then(response => {
     if (response.status >= 400) {
       // !response.ok - error handling
-      return response.json().then(errResData => {
+      return response.json().then(errResData => { //return the error
         const error = new Error('Something went wrong!');
-        error.data = errResData;
+        error.data = errResData;  //create error data
         throw error;
       });
     }
-    return response.json();
+    return response.json(); //return the data
   });
 };
 
@@ -98,7 +98,7 @@ const sendData = () => {
       console.log(responseData);
     })
     .catch(err => {
-      console.log(err, err.data);
+      console.log(err, err.data); //get the err.data
     });
 };
 
