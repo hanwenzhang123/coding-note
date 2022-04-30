@@ -15,13 +15,13 @@ type Studio {
 }
 
 quert{    //query declaration
-  movieById(id: "gone-with-the-wind){
+  movieById(id: "gone-with-the-wind"){
             title
             studio {
               name
               location
             }
-  }
+  	}
 } 
 //GraphQL allows us to nest complex data in a single request
 
