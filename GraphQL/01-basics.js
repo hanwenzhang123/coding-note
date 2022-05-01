@@ -32,7 +32,8 @@ Type - A collection of fields that make up a specific queryable object.
  
 //Questions
 - The shape of a GraphQL response is determined by the Fields you include.
-- GraphQL is very similar to JSON in appearance; however, there are some differences. Which of the following JSON components are NOT required in a GraphQL query?
+- GraphQL is very similar to JSON in appearance; however, there are some differences. 
+- Which of the following JSON components are NOT required in a GraphQL query?
   Colons, Commas, Values
 - The "id, title, and tagline" in the below snippet are known as: Field
 query {
