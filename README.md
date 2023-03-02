@@ -1,11 +1,11 @@
 # coding-note 
 ### Git Commands
 ```
-git rev-list --count HEAD ^vpc-integration
+git rev-list --count HEAD ^integration-branch
 git reset --soft HEAD~#
 git add -A
-git commit -m””
-git push origin VPC-3016 -f 
+git commit -m”revert the previous command”
+git push origin my-ticket -f 
 ```
 
 ### JSON - Express.js - Mailchimp Server as example
