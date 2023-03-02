@@ -1,5 +1,14 @@
 # coding-note 
-JSON - Express.js - Mailchimp Server as example
+### Git Commands
+```
+git rev-list --count HEAD ^vpc-integration
+git reset --soft HEAD~#
+git add -A
+git commit -m””
+git push origin VPC-3016 -f 
+```
+
+### JSON - Express.js - Mailchimp Server as example
 ```JavaScript
 const express = require('express');
 const bodyParser = require('body-parser');
